@@ -1,15 +1,9 @@
 import React from 'react';
-import { InterestCalculator } from './components/interest-calculator/calculateInterest';
+import { InterestCalc } from './components/interest-calculator/interestCalc';
 import './App.css';
 
 function App() {
-	return (
-		<div>
-			<div className="container">
-				<InterestCalculator />
-			</div>
-		</div>
-	);
+	return <div className="container">{<InterestCalc />}</div>;
 }
 
 export default App;

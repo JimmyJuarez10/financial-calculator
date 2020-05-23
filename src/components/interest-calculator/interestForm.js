@@ -1,6 +1,11 @@
-import React, { useState } from 'react';
+import React, { setState, useState } from 'react';
 
 const InterestForm = (props) => {
+	const [interest, setInterest] = useState('');
+	const [period, setPeriod] = useState('');
+	const [presentValue, setPresentValue] = useState('');
+	console.log(props.presentValue);
+
 	return (
 		<>
 			<h2>Interest Calculator</h2>
@@ -12,8 +17,8 @@ const InterestForm = (props) => {
 					</label>
 					<input
 						type="number"
-						value={props.presentValue}
-						// onChange={(e) => setPresentValue(e.target.value)}
+						value={presentValue}
+						onChange={(e) => setPresentValue(e.target.value)}
 						placeholder="Present Value"
 					/>
 				</div>
@@ -21,8 +26,8 @@ const InterestForm = (props) => {
 					<label htmlFor="period">Time</label>
 					<input
 						type="number"
-						value={props.period}
-						// onChange={(e) => setPeriod(e.target.value)}
+						value={period}
+						onChange={(e) => setPeriod(e.target.value)}
 						placeholder="Time"
 					/>
 				</div>
@@ -30,8 +35,8 @@ const InterestForm = (props) => {
 					<label htmlFor="interest">Interest </label>
 					<input
 						type="number"
-						value={props.interest}
-						// onChange={(e) => setInterest(e.target.value)}
+						value={interest}
+						onChange={(e) => setInterest(e.target.value)}
 						placeholder="Interest"
 					/>
 				</div>

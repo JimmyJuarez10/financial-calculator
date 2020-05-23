@@ -14,12 +14,13 @@ export class InterestCalc extends Component {
 			},
 		};
 	}
+
 	render() {
 		const form = this.state.form;
 		return (
 			<>
 				<InterestForm value={form} />
-				<Balance balance={this.state.futureValue} />
+				<Balance />
 			</>
 		);
 	}

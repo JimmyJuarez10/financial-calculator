@@ -20,7 +20,7 @@ export class InterestCalc extends Component {
   render() {
     return (
       <>
-        <div className="container">
+        <div className="individual-app">
           <h2>Interest Calculator</h2>
           <Balance balance={this.state.futureValue} />
           <InterestForm handleSubmit={this.myCallback} />
